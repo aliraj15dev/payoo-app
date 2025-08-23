@@ -1,1 +1,1 @@
-[Payoo-App]{https://aliraj15dev.github.io/payoo-app/}
+[Payoo-App](https://aliraj15dev.github.io/payoo-app/)
