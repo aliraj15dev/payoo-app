@@ -1,62 +1,97 @@
-//! Logout and go to login page
-document.getElementById('login-page')
-    .addEventListener('click', function(){
+//! Logout and go to the login page
+document.getElementById('login-page').addEventListener('click', function(){
     window.location.href = "index.html"
 })
 
-//* add money
+//* button click of the add money section 1️⃣
 document.getElementById('add-money').addEventListener('click', function(e){
-    e.preventDefault()
-    const addMoney = parseInt(document.getElementById('added-money').value)
-    const balance = parseInt(document.getElementById('balance').innerText)
+    e.preventDefault() //! type="button"
+    const pin = 2121
 
-    const newBalance = balance+addMoney
+    // const bankName = document.getElementById('').value
+    const accountNumber = document.getElementById('account-number').value
+    const addedMoney = parseInt(document.getElementById('added-money').value)
+    const checkPin = parseInt(document.getElementById('user-pin').value)
+
+    if(accountNumber.length !== 11 || checkPin !== pin){
+        alert('Something is wrong!⚠️')
+        return;
+    }
+
+    const balance = parseInt(document.getElementById('balance').innerText)
+    const newBalance = balance+addedMoney
     document.getElementById('balance').innerText = newBalance
 })
 
-//* cashout
+//* button click of the add cashout section 2️⃣
 document.getElementById('withdraw').addEventListener('click', function(e){
-    e.preventDefault()
-    const addMoney = parseInt(document.getElementById('cashout').value)
-    const balance = parseInt(document.getElementById('balance').innerText)
+    e.preventDefault() //! button outside of the form tag
+    const pin = 2121
 
-    const newBalance = balance-addMoney
+    const agentNumber = document.getElementById('agent-number').value
+    const withdrawMoney = parseInt(document.getElementById('cashout').value)
+    const checkPin = parseInt(document.getElementById('withdraw-pin').value)
+
+    if(agentNumber.length !== 11 || checkPin !== pin){
+        alert('Something is wrong!⚠️')
+        return;
+    }
+
+    const balance = parseInt(document.getElementById('balance').innerText)
+    const newBalance = balance-withdrawMoney
     document.getElementById('balance').innerText = newBalance
 })
 
-//* transfer money
+
+//* button click of the add transfer money section 3️⃣
 document.getElementById('transfer').addEventListener('click', function(e){
     e.preventDefault()
-    const addMoney = parseInt(document.getElementById('transfer-money').value)
-    const balance = parseInt(document.getElementById('balance').innerText)
+    const pin = 2121
 
-    const newBalance = balance-addMoney
+    const othersNumber = document.getElementById('other-account-number').value
+    const transferMoney = parseInt(document.getElementById('transfer-money').value)
+    const checkPin = parseInt(document.getElementById('transfer-pin').value)
+
+    if(othersNumber.length !== 11 || checkPin !== pin){
+        alert('Something is wrong!⚠️')
+        return;
+    }
+
+    const balance = parseInt(document.getElementById('balance').innerText)
+    const newBalance = balance-transferMoney
     document.getElementById('balance').innerText = newBalance
 })
 
-//* get bonus
+//* button click of the get button section 4️⃣
 document.getElementById('get-bonus').addEventListener('click', function(e){
     e.preventDefault()
-    const addMoney = parseInt(document.getElementById('get-bonus-money').value)
-    const balance = parseInt(document.getElementById('balance').innerText)
+    const getBonus = parseInt(document.getElementById('get-bonus-money').value)
 
-    const newBalance = balance+addMoney
+    const balance = parseInt(document.getElementById('balance').innerText)
+    document.getElementById('balance').innerText = balance+getBonus
+})
+
+//* button click of the pay bill section 5️⃣
+document.getElementById('pay-bill').addEventListener('click', function(){
+    const pin = 2121
+
+    // const bankName = document.getElementById('').value
+    const billAccountNumber = document.getElementById('bill-number').value
+    const billAmount = parseInt(document.getElementById('pay-bill-money').value)
+    const checkPin = parseInt(document.getElementById('bill-pay-pin').value)
+
+    if(billAccountNumber.length !== 11 || checkPin !== pin){
+        alert('Something is wrong!⚠️')
+        return;
+    }
+
+    const balance = parseInt(document.getElementById('balance').innerText)
+    const newBalance = balance-billAmount
     document.getElementById('balance').innerText = newBalance
 })
 
-//* pay bill
-document.getElementById('pay-bill').addEventListener('click', function(e){
-    e.preventDefault()
-    const addMoney = parseInt(document.getElementById('pay-bill-money').value)
-    const balance = parseInt(document.getElementById('balance').innerText)
 
-    const newBalance = balance-addMoney
-    document.getElementById('balance').innerText = newBalance
-})
-
-
-document.getElementById('add-money-card')
-.addEventListener('click', function(){
+document.getElementById('add-money-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')
@@ -73,8 +108,7 @@ document.getElementById('add-money-card')
     transactions.style.display = "none"
 })
 
-document.getElementById('cashout-card')
-.addEventListener('click', function(){
+document.getElementById('cashout-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')
@@ -91,8 +125,7 @@ document.getElementById('cashout-card')
     transactions.style.display = "none"
 })
 
-document.getElementById('transfer-money-card')
-.addEventListener('click', function(){
+document.getElementById('transfer-money-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')
@@ -109,8 +142,7 @@ document.getElementById('transfer-money-card')
     transactions.style.display = "none"
 })
 
-document.getElementById('get-bonus-card')
-.addEventListener('click', function(){
+document.getElementById('get-bonus-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')
@@ -127,8 +159,7 @@ document.getElementById('get-bonus-card')
     transactions.style.display = "none"
 })
 
-document.getElementById('pay-bill-card')
-.addEventListener('click', function(){
+document.getElementById('pay-bill-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')
@@ -145,8 +176,7 @@ document.getElementById('pay-bill-card')
     transactions.style.display = "none"
 })
 
-document.getElementById('transactions-card')
-.addEventListener('click', function(){
+document.getElementById('transactions-card').addEventListener('click', function(){
     const history = document.getElementById('history')
     history.style.display = "none"
     const addMoney = document.getElementById('add-money-section')

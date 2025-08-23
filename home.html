@@ -134,14 +134,14 @@
                 <option>Dutch Bangla Bank</option>
             </select><br>
 
-            <label for="">Bank Account Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit account number"><br>
+            <label>Bank Account Number</label><br>
+            <input id="account-number" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit account number"><br>
 
             <label for="">Amount to Add</label><br>
             <input id="added-money" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Add Amount to withdraw"><br>
 
             <label for="">Pin Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
+            <input id="user-pin" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
             <button id="add-money" class="btn bg-blue-500 text-white text-xl font-semibold rounded-xl w-full">Add Money</button>
         </form>
         </div>
@@ -149,14 +149,14 @@
         <div id="cashout-section" class=" hidden max-w-9/10 mx-auto mt-8">
         <h2 class="text-xl font-bold">Cash Out</h2>
         <form class="bg-white p-6 rounded-2xl space-y-5 mt-4">
-            <label for="">Agent Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit number"><br>
+            <label>Agent Number</label><br>
+            <input id="agent-number" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit number"><br>
 
             <label for="">Amount</label><br>
             <input id="cashout" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter Amount to withdraw"><br>
 
-            <label for="">Pin Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
+            <label>Pin Number</label><br>
+            <input id="withdraw-pin" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
             <button id="withdraw" class="btn bg-blue-500 text-white text-xl font-semibold rounded-xl w-full">Withdraw Money</button>
         </form>
         </div>
@@ -164,14 +164,14 @@
         <div id="transfer-money-section" class=" hidden max-w-9/10 mx-auto mt-8">
         <h2 class="text-xl font-bold">Transfer Money</h2>
         <form class="bg-white p-6 rounded-2xl space-y-5 mt-4">
-            <label for="">User Account Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit number"><br>
+            <label>User Account Number</label><br>
+            <input id="other-account-number" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 11 digit number"><br>
 
             <label for="">Amount</label><br>
             <input id="transfer-money" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter Amount to withdraw"><br>
 
             <label for="">Pin Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
+            <input id="transfer-pin" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
             <button id="transfer" class="btn bg-blue-500 text-white text-xl font-semibold rounded-xl w-full">Send Now</button>
         </form>
         </div>
@@ -197,15 +197,15 @@
             </select><br>
 
             <label for="">Bill Account Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter account number"><br>
+            <input id="bill-number" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter account number"><br>
 
             <label for="">Amount to Pay</label><br>
             <input id="pay-bill-money" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Amount to pay"><br>
 
             <label for="">Pin Number</label><br>
-            <input class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
-            <button id="pay-bill" class="btn bg-blue-500 text-white text-xl font-semibold rounded-xl w-full">Pay Now</button>
+            <input id="bill-pay-pin" class="input w-full bg-gray-200 rounded-xl border-none" type="number" placeholder="Enter 4 digit pin number"><br>
         </form>
+        <button id="pay-bill" class="btn bg-blue-500 text-white text-xl font-semibold rounded-xl w-full">Pay Now</button>
         </div>
 
         <div id="transactions-section" class="hidden max-w-9/10 mx-auto mt-8 space-y-5">
